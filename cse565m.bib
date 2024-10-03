@@ -161,6 +161,24 @@
   keywords={Hardware;Field programmable gate arrays;Tools;Radar;Automotive engineering;Radar signal processing;Design methodology;High-Level Synthesis (HLS);Hardware Description Language (HDL);Automotive Radar Signal Processing System;Register Transfer Level (RTL);Xilinx Vivado HLS;Quality-of-Result (QoR)},
   doi={10.1109/CCECE47787.2020.9255725}}
 
+@inproceedings{10.1145/3431920.3439290,
+author = {Chen, Xinyu and Tan, Hongshi and Chen, Yao and He, Bingsheng and Wong, Weng-Fai and Chen, Deming},
+title = {ThunderGP: HLS-based Graph Processing Framework on FPGAs},
+year = {2021},
+isbn = {9781450382182},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3431920.3439290},
+doi = {10.1145/3431920.3439290},
+abstract = {FPGA has been an emerging computing infrastructure in datacenters benefiting from features of fine-grained parallelism, energy efficiency, and reconfigurability. Meanwhile, graph processing has attracted tremendous interest in data analytics, and its performance is in increasing demand with the rapid growth of data. Many works have been proposed to tackle the challenges of designing efficient FPGA-based accelerators for graph processing. However, the largely overlooked programmability still requires hardware design expertise and sizable development efforts from developers.In order to close the gap, we propose ThunderGP, an open-source HLS-based graph processing framework on FPGAs, with which developers could enjoy the performance of FPGA-accelerated graph processing by writing only a few high-level functions with no knowledge of the hardware. ThunderGP adopts the Gather-Apply-Scatter (GAS) model as the abstraction of various graph algorithms and realizes the model by a build-in highly-paralleled and memory-efficient accelerator template. With high-level functions as inputs, ThunderGP automatically explores the massive resources and memory bandwidth of multiple Super Logic Regions (SLRs) on FPGAs to generate accelerator and then deploys the accelerator and schedules tasks for the accelerator. We evaluate ThunderGP with seven common graph applications. The results show that accelerators on real hardware platforms deliver 2.9 times speedup over the state-of-the-art approach, running at 250MHz and achieving throughput up to 6,400 MTEPS (Million Traversed Edges Per Second). We also conduct a case study with ThunderGP, which delivers up to 419 times speedup over the CPU-based design and requires significantly reduced development efforts. This work is open-sourced on Github at https://github.com/Xtra-Computing/ThunderGP.},
+booktitle = {The 2021 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays},
+pages = {69–80},
+numpages = {12},
+keywords = {fpga, framework, graph processing, high-level synthesis, multiple super logic regions},
+location = {Virtual Event, USA},
+series = {FPGA '21}
+}
+
 
 
 @Comment{jabref-meta: databaseType:bibtex;}
