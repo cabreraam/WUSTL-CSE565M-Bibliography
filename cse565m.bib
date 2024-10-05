@@ -161,7 +161,23 @@
   keywords={Hardware;Field programmable gate arrays;Tools;Radar;Automotive engineering;Radar signal processing;Design methodology;High-Level Synthesis (HLS);Hardware Description Language (HDL);Automotive Radar Signal Processing System;Register Transfer Level (RTL);Xilinx Vivado HLS;Quality-of-Result (QoR)},
   doi={10.1109/CCECE47787.2020.9255725}}
 
-
+@inproceedings{10.1145/3626202.3637562,
+author = {Zeng, Shulin and Liu, Jun and Dai, Guohao and Yang, Xinhao and Fu, Tianyu and Wang, Hongyi and Ma, Wenheng and Sun, Hanbo and Li, Shiyao and Huang, Zixiao and Dai, Yadong and Li, Jintao and Wang, Zehao and Zhang, Ruoyu and Wen, Kairui and Ning, Xuefei and Wang, Yu},
+title = {FlightLLM: Efficient Large Language Model Inference with a Complete Mapping Flow on FPGAs},
+year = {2024},
+isbn = {9798400704185},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3626202.3637562},
+doi = {10.1145/3626202.3637562},
+abstract = {Transformer-based Large Language Models (LLMs) have made a significant impact on various domains. However, LLMs' efficiency suffers from both heavy computation and memory overheads. Compression techniques like sparsification and quantization are commonly used to mitigate the gap between LLM's computation/memory overheads and hardware capacity. However, existing GPU and transformer-based accelerators cannot efficiently process compressed LLMs, due to the following unresolved challenges: low computational efficiency, underutilized memory bandwidth, and large compilation overheads. This paper proposes FlightLLM, enabling efficient LLMs inference with a complete mapping flow on FPGAs. In FlightLLM, we highlight an innovative solution that the computation and memory overhead of LLMs can be solved by utilizing FPGA-specific resources (e.g., DSP48 and heterogeneous memory hierarchy). We propose a configurable sparse DSP chain to support different sparsity patterns with high computation efficiency. Second, we propose an always-on-chip decode scheme to boost memory bandwidth with mixed-precision support. Finally, to make FlightLLM available for real-world LLMs, we propose a length adaptive compilation method to reduce the compilation overhead. Implemented on the Xilinx Alveo U280 FPGA, FlightLLM achieves 6.0\texttimes{} higher energy efficiency and 1.8\texttimes{} better cost efficiency against commercial GPUs (e.g., NVIDIA V100S) on modern LLMs (e.g., LLaMA2-7B) using vLLM and SmoothQuant under the batch size of one. FlightLLM beats NVIDIA A100 GPU with 1.2\texttimes{} higher throughput using the latest Versal VHK158 FPGA.},
+booktitle = {Proceedings of the 2024 ACM/SIGDA International Symposium on Field Programmable Gate Arrays},
+pages = {223–234},
+numpages = {12},
+keywords = {complete mapping flow, fpga, large language model},
+location = {Monterey, CA, USA},
+series = {FPGA '24}
+}
 
 @Comment{jabref-meta: databaseType:bibtex;}
 
