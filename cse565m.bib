@@ -161,7 +161,23 @@
   keywords={Hardware;Field programmable gate arrays;Tools;Radar;Automotive engineering;Radar signal processing;Design methodology;High-Level Synthesis (HLS);Hardware Description Language (HDL);Automotive Radar Signal Processing System;Register Transfer Level (RTL);Xilinx Vivado HLS;Quality-of-Result (QoR)},
   doi={10.1109/CCECE47787.2020.9255725}}
 
-
+@inproceedings{10.1145/3626202.3637556,
+author = {Elakhras, Ayatallah and Guerrieri, Andrea and Josipovic, Lana and Ienne, Paolo},
+title = {Survival of the Fastest: Enabling More Out-of-Order Execution in Dataflow Circuits},
+year = {2024},
+isbn = {9798400704185},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3626202.3637556},
+doi = {10.1145/3626202.3637556},
+abstract = {Dynamically scheduled HLS, through dataflow circuit generation, has proven successful at exploiting operation-level parallelism in several important situations where statically scheduled HLS fails. Yet, although existing dataflow circuits support out-of-order execution of different operations, they strictly confine successive instances of the same operation to execute sequentially in program order, which drastically affects the circuit's performance in the presence of a long-latency operation. This is in stark contrast with the reordering freedom customary in superscalar processors that naturally exploit qualitatively more parallelism in a broad class of applications. The goal of this work is to produce dataflow circuits that have reordering capabilities closer to those of out-of-order superscalar processors. This can bring dramatic improvements in some practically important cases, including when outer iterations in nested loops are independent and the inner loop execution has an unavoidable large initiation interval. In various cases, our technique increases throughput by a factor dependent on the initiation interval of the kernel, at a comparatively modest area cost.},
+booktitle = {Proceedings of the 2024 ACM/SIGDA International Symposium on Field Programmable Gate Arrays},
+pages = {44–54},
+numpages = {11},
+keywords = {dataflow, high-level synthesis, out-of-order execution},
+location = {Monterey, CA, USA},
+series = {FPGA '24}
+}
 
 @Comment{jabref-meta: databaseType:bibtex;}
 
