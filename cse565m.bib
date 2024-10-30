@@ -171,6 +171,47 @@
   keywords={Hardware;Field programmable gate arrays;Tools;Radar;Automotive engineering;Radar signal processing;Design methodology;High-Level Synthesis (HLS);Hardware Description Language (HDL);Automotive Radar Signal Processing System;Register Transfer Level (RTL);Xilinx Vivado HLS;Quality-of-Result (QoR)},
   doi={10.1109/CCECE47787.2020.9255725}}
 
+@inproceedings{10.1145/3626202.3637564,
+    author = {Lin, Will and Shan, Yizhou and Kosta, 
+              Ryan and Krishnamurthy, Arvind and Zhang, Yiying},
+    title = {SuperNIC: An FPGA-Based, Cloud-Oriented SmartNIC},
+    year = {2024},
+    isbn = {9798400704185},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/3626202.3637564},
+    doi = {10.1145/3626202.3637564},
+    abstract = {With CPU scaling slowing down in today's data centers, 
+                more functionalities are being offloaded from the CPU to 
+                auxiliary devices. One such device is the SmartNIC, which is 
+                being increasingly adopted in data centers. In today's cloud 
+                environment, VMs on the same server can each have their own network 
+                computation (or network tasks) or workflows of network tasks to 
+                offload to a SmartNIC. These network tasks can be dynamically 
+                added/removed as VMs come and go and can be shared across VMs. 
+                Such dynamism demands that a SmartNIC not only schedules and 
+                processes packets but also manages and executes offloaded network 
+                tasks for different users. Although software solutions like an OS 
+                exist for managing software-based network tasks, such software-based 
+                SmartNICs cannot keep up with the quickly increasing data-center network speed. 
+                This paper proposes a new SmartNIC platform called SuperNIC that allows multiple 
+                tenants to efficiently and safely offload FPGA-based network computation DAGs. 
+                For efficiency and scalability, our core idea is to group network tasks into 
+                virtual chains that are dynamically mapped to different forms of physical 
+                chains depending on load and FPGA space availability. We further propose 
+                techniques to automatically scale network task chains with different types of 
+                parallelism. Moreover, we propose a fair sharing mechanism that considers both fair 
+                space sharing and fair time sharing of different types of hardware resources. Our FPGA 
+                prototype of SuperNIC achieves high bandwidth and low latency performance whilst 
+                efficiently utilizing and fairly sharing resources.},
+    booktitle = {Proceedings of the 2024 ACM/SIGDA International Symposium on Field Programmable Gate Arrays},
+    pages = {130–141},
+    numpages = {12},
+    keywords = {multi-tenancy, network programmability, smartnic},
+    location = {Monterey, CA, USA},
+    series = {FPGA '24}
+}
+
 
 @INPROCEEDINGS{9556439,
   author={He, Zhenhao and Korolija, Dario and Alonso, Gustavo},
@@ -311,6 +352,7 @@ series = {FPGA '22}
   url = {https://doi.org/10.1145/3626202.3637573}, 
   doi = {10.1145/3626202.3637573}
 }
+
 
 @Comment{jabref-meta: databaseType:bibtex;}
 
