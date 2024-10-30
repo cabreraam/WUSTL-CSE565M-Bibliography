@@ -53,7 +53,7 @@
                 evaluation;FPGA;Performance evaluation;OpenCL;Heterogeneous
                 computing},
     modificationdate = {2024-06-08T08:53:38},
-    owner = {Anthony Cabrera},
+    owner = {Anthony Cabrera, ceneblock},
 }
 
 @article{zhao2024hlperf,
@@ -138,6 +138,16 @@
                 faster than the FPGA alternatives up to 10.3x.},
 }
 
+@ARTICLE{9141369,
+  author={Lee, Joo Hwan and Zhang, Hui and Lagrange, Veronica and Krishnamoorthy, Praveen and Zhao, Xiaodong and Ki, Yang Seok},
+  journal={IEEE Computer Architecture Letters}, 
+  title={SmartSSD: FPGA Accelerated Near-Storage Data Analytics on SSD}, 
+  year={2020},
+  volume={19},
+  number={2},
+  pages={110-113},
+  keywords={Field programmable gate arrays;Bandwidth;Random access memory;IP networks;Pipelines;Data analysis;Throughput;SmartSSD;data analytics;spark;parquet;SSD},
+  doi={10.1109/LCA.2020.3009347}}
 
 @INPROCEEDINGS{9221526,
   author={Singh, Gagandeep and Diamantopoulos, Dionysios and Hagleitner, Christoph and Gomez-Luna, Juan and Stuijk, Sander and Mutlu, Onur and Corporaal, Henk},
@@ -160,6 +170,226 @@
   pages={1-6},
   keywords={Hardware;Field programmable gate arrays;Tools;Radar;Automotive engineering;Radar signal processing;Design methodology;High-Level Synthesis (HLS);Hardware Description Language (HDL);Automotive Radar Signal Processing System;Register Transfer Level (RTL);Xilinx Vivado HLS;Quality-of-Result (QoR)},
   doi={10.1109/CCECE47787.2020.9255725}}
+
+
+@inproceedings{Manticore2024,
+    author = {Kashani, Sahand and Emami, Mahyar and Kamahori, Keisuke and Pourghannad, Sepehr and Raj, Ritik and Larus, James R.},
+    title = {A 475 MHz Manycore FPGA Accelerator for RTL Simulation},
+    year = {2024},
+    isbn = {9798400704185},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/3626202.3637579},
+    doi = {10.1145/3626202.3637579},
+    abstract = {This paper presents the implementation of Manticore: a manycore accelerator for parallel RTL simulation. Manticore packs up to 225 custom soft processors running at 475 MHz on a large FPGA. Implementing manycore accelerators on FPGAs is challenging as designers must reconcile the conflicting goals of maximizing the number of cores on the chip and clocking them at the highest possible frequency. Designers face two classes of constraints: (1) architectural constraints imposed by a large FPGA's multi-die structure, and (2) physical constraints imposed by the FPGA shell's size and placement. Physical design therefore plays a critical role in the implementation of manycore accelerators. We present physical design challenges faced during Manticore's implementation on the AMD Alveo U200 card---a large FPGA with a poorly-placed, wide shell that challenges physical implementation.},
+    booktitle = {Proceedings of the 2024 ACM/SIGDA International Symposium on Field Programmable Gate Arrays},
+    pages = {78–84},
+    numpages = {7},
+    keywords = {fpga, high clock frequency, manycore accelerators, physical design},
+    location = {Monterey, CA, USA},
+    owner = {Owen Cromly}
+}
+
+
+@inproceedings{10.1145/3587135.3592766,
+    author = {Edwin Popaja, Curzel, Serena and Fiorito, Michele and Cueva, Patricia Lopez and Jorge, Tiago and Tsiodras, Thanassis and Ferrandi, Fabrizio},
+    title = {Exploration of Synthesis Methods from Simulink Models to FPGA for Aerospace Applications},
+    year = {2023},
+    isbn = {9798400701405},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/3587135.3592766},
+    doi = {10.1145/3587135.3592766},
+    abstract = {Model-based development techniques in Matlab/Simulink simplify the design and implementation of software for aerospace applications, providing the required level of abstraction for scientists that work on complex navigation and control algorithms. As Field Programmable Gate Arrays (FPGAs) have become more and more relevant in space hardware platforms, developers could benefit from automated acceleration flows that do not require extensive manual rewriting of their code to port it on FPGA. We analyze existing methods that synthesize Simulink models, showing how a combination of automated C code generation and High-Level Synthesis can enable rapid prototyping, fast design space exploration, and a good trade-off between accelerator efficiency and design flexibility. We test the proposed acceleration flow on real-world guidance and navigation control systems for CubeSats.},
+    booktitle = {Proceedings of the 20th ACM International Conference on Computing Frontiers},
+    pages = {243–249},
+    numpages = {7},
+    keywords = {FPGA, High-Level Synthesis, aerospace},
+    location = {Bologna, Italy},
+    series = {CF '23}
+}
+
+@inproceedings{10.1145/3626202.3637564,
+    author = {Lin, Will and Shan, Yizhou and Kosta, 
+              Ryan and Krishnamurthy, Arvind and Zhang, Yiying},
+    title = {SuperNIC: An FPGA-Based, Cloud-Oriented SmartNIC},
+    year = {2024},
+    isbn = {9798400704185},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/3626202.3637564},
+    doi = {10.1145/3626202.3637564},
+    abstract = {With CPU scaling slowing down in today's data centers, 
+                more functionalities are being offloaded from the CPU to 
+                auxiliary devices. One such device is the SmartNIC, which is 
+                being increasingly adopted in data centers. In today's cloud 
+                environment, VMs on the same server can each have their own network 
+                computation (or network tasks) or workflows of network tasks to 
+                offload to a SmartNIC. These network tasks can be dynamically 
+                added/removed as VMs come and go and can be shared across VMs. 
+                Such dynamism demands that a SmartNIC not only schedules and 
+                processes packets but also manages and executes offloaded network 
+                tasks for different users. Although software solutions like an OS 
+                exist for managing software-based network tasks, such software-based 
+                SmartNICs cannot keep up with the quickly increasing data-center network speed. 
+                This paper proposes a new SmartNIC platform called SuperNIC that allows multiple 
+                tenants to efficiently and safely offload FPGA-based network computation DAGs. 
+                For efficiency and scalability, our core idea is to group network tasks into 
+                virtual chains that are dynamically mapped to different forms of physical 
+                chains depending on load and FPGA space availability. We further propose 
+                techniques to automatically scale network task chains with different types of 
+                parallelism. Moreover, we propose a fair sharing mechanism that considers both fair 
+                space sharing and fair time sharing of different types of hardware resources. Our FPGA 
+                prototype of SuperNIC achieves high bandwidth and low latency performance whilst 
+                efficiently utilizing and fairly sharing resources.},
+    booktitle = {Proceedings of the 2024 ACM/SIGDA International Symposium on Field Programmable Gate Arrays},
+    pages = {130–141},
+    numpages = {12},
+    keywords = {multi-tenancy, network programmability, smartnic},
+    location = {Monterey, CA, USA},
+    series = {FPGA '24}
+}
+
+
+@INPROCEEDINGS{9556439,
+  author={He, Zhenhao and Korolija, Dario and Alonso, Gustavo},
+  booktitle={2021 31st International Conference on Field-Programmable Logic and Applications (FPL)}, 
+  title={EasyNet: 100 Gbps Network for HLS}, 
+  year={2021},
+  volume={},
+  number={},
+  pages={197-203},
+  keywords={TCPIP;Tools;Throughput;Libraries;High level synthesis;Low latency communication;Kernel},
+  doi={10.1109/FPL53798.2021.00040}
+}
+
+
+@inproceedings{10.1145/3626202.3637562,
+author = {Zeng, Shulin and Liu, Jun and Dai, Guohao and Yang, Xinhao and Fu, Tianyu and Wang, Hongyi and Ma, Wenheng and Sun, Hanbo and Li, Shiyao and Huang, Zixiao and Dai, Yadong and Li, Jintao and Wang, Zehao and Zhang, Ruoyu and Wen, Kairui and Ning, Xuefei and Wang, Yu},
+title = {FlightLLM: Efficient Large Language Model Inference with a Complete Mapping Flow on FPGAs},
+year = {2024},
+isbn = {9798400704185},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3626202.3637562},
+doi = {10.1145/3626202.3637562},
+abstract = {Transformer-based Large Language Models (LLMs) have made a significant impact on various domains. However, LLMs' efficiency suffers from both heavy computation and memory overheads. Compression techniques like sparsification and quantization are commonly used to mitigate the gap between LLM's computation/memory overheads and hardware capacity. However, existing GPU and transformer-based accelerators cannot efficiently process compressed LLMs, due to the following unresolved challenges: low computational efficiency, underutilized memory bandwidth, and large compilation overheads. This paper proposes FlightLLM, enabling efficient LLMs inference with a complete mapping flow on FPGAs. In FlightLLM, we highlight an innovative solution that the computation and memory overhead of LLMs can be solved by utilizing FPGA-specific resources (e.g., DSP48 and heterogeneous memory hierarchy). We propose a configurable sparse DSP chain to support different sparsity patterns with high computation efficiency. Second, we propose an always-on-chip decode scheme to boost memory bandwidth with mixed-precision support. Finally, to make FlightLLM available for real-world LLMs, we propose a length adaptive compilation method to reduce the compilation overhead. Implemented on the Xilinx Alveo U280 FPGA, FlightLLM achieves 6.0\texttimes{} higher energy efficiency and 1.8\texttimes{} better cost efficiency against commercial GPUs (e.g., NVIDIA V100S) on modern LLMs (e.g., LLaMA2-7B) using vLLM and SmoothQuant under the batch size of one. FlightLLM beats NVIDIA A100 GPU with 1.2\texttimes{} higher throughput using the latest Versal VHK158 FPGA.},
+booktitle = {Proceedings of the 2024 ACM/SIGDA International Symposium on Field Programmable Gate Arrays},
+pages = {223–234},
+numpages = {12},
+keywords = {complete mapping flow, fpga, large language model},
+location = {Monterey, CA, USA},
+series = {FPGA '24}
+}
+
+@article{10.1145/3676849,
+author = {Khatti, Moazin and Tian, Xingyu and Sedigh Baroughi, Ahmad and Raj Baranwal, Akhil and Chi, Yuze and Guo, Licheng and Cong, Jason and Fang, Zhenman},
+title = {PASTA: Programming and Automation Support for Scalable Task-Parallel HLS Programs on Modern Multi-Die FPGAs},
+year = {2024},
+issue_date = {September 2024},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {17},
+number = {3},
+issn = {1936-7406},
+url = {https://doi.org/10.1145/3676849},
+doi = {10.1145/3676849},
+abstract = {In recent years, the adoption of FPGAs in datacenters has increased, with a growing number of users choosing High-Level Synthesis (HLS) as their preferred programming method. While HLS simplifies FPGA programming, one notable challenge arises when scaling up designs for modern datacenter FPGAs that comprise multiple dies. The extra delays introduced due to die crossings and routing congestion can significantly degrade the frequency of large designs on these FPGA boards. Due to the gap between HLS design and physical design, it is challenging for HLS programmers to analyze and identify the root causes, and fix their HLS design to achieve better timing closure. Recent efforts have aimed to address these issues by employing coarse-grained floorplanning and pipelining strategies on task-parallel HLS designs where multiple tasks run concurrently and communicate through FIFO stream channels. However, many applications are not streaming friendly and many existing accelerator designs heavily rely on buffer channel based communication between tasks.In this work, we take a step further to support a task-parallel programming model where tasks can communicate via both FIFO stream channels and buffer channels. To achieve this goal, we design and implement the PASTA framework, which takes a large task-parallel HLS design as input and automatically generates a high-frequency FPGA accelerator via HLS and physical design co-optimization. Our framework introduces a latency-insensitive buffer channel design, which supports memory partitioning and ping-pong buffering while remaining compatible with vendor HLS tools. On the frontend, we provide an easy-to-use programming model for utilizing the proposed buffer channel; while on the backend, we implement efficient placement and pipelining strategies for the proposed buffer channel. To validate the effectiveness of our framework, we test it on four widely used Rodinia HLS benchmarks and two real-world accelerator designs and show an average frequency improvement of 25\%, with peak improvements of up to 89\% on AMD/Xilinx Alveo U280 boards compared to Vitis HLS baselines.},
+journal = {ACM Trans. Reconfigurable Technol. Syst.},
+month = sep,
+articleno = {42},
+numpages = {31},
+keywords = {Multi-die FPGA, high-level synthesis, task-parallel programming, buffer channel, hardware acceleration, frequency optimization, coarse-grained floorplanning}
+}
+
+@inproceedings{10.1145/3431920.3439290,
+author = {Chen, Xinyu and Tan, Hongshi and Chen, Yao and He, Bingsheng and Wong, Weng-Fai and Chen, Deming},
+title = {ThunderGP: HLS-based Graph Processing Framework on FPGAs},
+year = {2021},
+isbn = {9781450382182},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3431920.3439290},
+doi = {10.1145/3431920.3439290},
+abstract = {FPGA has been an emerging computing infrastructure in datacenters benefiting from features of fine-grained parallelism, energy efficiency, and reconfigurability. Meanwhile, graph processing has attracted tremendous interest in data analytics, and its performance is in increasing demand with the rapid growth of data. Many works have been proposed to tackle the challenges of designing efficient FPGA-based accelerators for graph processing. However, the largely overlooked programmability still requires hardware design expertise and sizable development efforts from developers.In order to close the gap, we propose ThunderGP, an open-source HLS-based graph processing framework on FPGAs, with which developers could enjoy the performance of FPGA-accelerated graph processing by writing only a few high-level functions with no knowledge of the hardware. ThunderGP adopts the Gather-Apply-Scatter (GAS) model as the abstraction of various graph algorithms and realizes the model by a build-in highly-paralleled and memory-efficient accelerator template. With high-level functions as inputs, ThunderGP automatically explores the massive resources and memory bandwidth of multiple Super Logic Regions (SLRs) on FPGAs to generate accelerator and then deploys the accelerator and schedules tasks for the accelerator. We evaluate ThunderGP with seven common graph applications. The results show that accelerators on real hardware platforms deliver 2.9 times speedup over the state-of-the-art approach, running at 250MHz and achieving throughput up to 6,400 MTEPS (Million Traversed Edges Per Second). We also conduct a case study with ThunderGP, which delivers up to 419 times speedup over the CPU-based design and requires significantly reduced development efforts. This work is open-sourced on Github at https://github.com/Xtra-Computing/ThunderGP.},
+booktitle = {The 2021 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays},
+pages = {69–80},
+numpages = {12},
+keywords = {fpga, framework, graph processing, high-level synthesis, multiple super logic regions},
+location = {Virtual Event, USA},
+series = {FPGA '21}
+}
+
+
+@inproceedings{10.1145/3490422.3502361,
+author = {Guo, Licheng and Maidee, Pongstorn and Zhou, Yun and Lavin, Chris and Wang, Jie and Chi, Yuze and Qiao, Weikang and Kaviani, Alireza and Zhang, Zhiru and Cong, Jason},
+title = {RapidStream: Parallel Physical Implementation of FPGA HLS Designs},
+year = {2022},
+isbn = {9781450391498},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3490422.3502361},
+doi = {10.1145/3490422.3502361},
+abstract = {FPGAs require a much longer compilation cycle than conventional computing platforms like CPUs. In this paper, we shorten the overall compilation time by co-optimizing the HLS compilation (C-to-RTL) and the back-end physical implementation (RTL-to-bitstream). We propose a split compilation approach based on the pipelining flexibility at the HLS level, which allows us to partition designs for parallel placement and routing then stitch the separate partitions together. We outline a number of technical challenges and address them by breaking the conventional boundaries between different stages of the traditional FPGA tool flow and reorganizing them to achieve a fast end-to-end compilation. Our research produces RapidStream, a parallelized and physical-integrated compilation framework that takes in an HLS dataflow program in C/C++ and generates a fully placed and routed implementation. When tested on the Xilinx U250 FPGA with a set of realistic HLS designs, RapidStream achieves a 5-7X reduction in compile time and up to 1.3X increase in frequency when compared to a commercial-off-the-shelf toolchain. In addition, we provide preliminary results using a customized open-source router to reduce the compile time up to an order of magnitude in the cases with lower performance requirements. The tool is open-sourced at github.com/Licheng-Guo/RapidStream.},
+booktitle = {Proceedings of the 2022 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays},
+pages = {1–12},
+numpages = {12},
+keywords = {routing, placement, parallel, hls, fpga, dataflow},
+location = {Virtual Event, USA},
+series = {FPGA '22}
+}
+
+
+@INPROCEEDINGS{6927496,
+  author={Calagar, Nazanin and Brown, Stephen D. and Anderson, Jason H.},
+  booktitle={2014 24th International Conference on Field Programmable Logic and Applications (FPL)}, 
+  title={Source-level debugging for FPGA high-level synthesis}, 
+  year={2014},
+  volume={},
+  number={},
+  pages={1-8},
+  keywords={Hardware;Debugging;Databases;Software;Silicon;Hardware design languages;Computer bugs},
+  doi={10.1109/FPL.2014.6927496}}
+
+
+@inproceedings{10.1145/2684746.2689060,
+    author = {Zhang, Chen and Li, Peng and Sun, Guangyu and Guan, Yijin and Xiao, Bingjun and Cong, Jason},
+    title = {Optimizing FPGA-based Accelerator Design for Deep Convolutional Neural Networks},
+    year = {2015},
+    isbn = {9781450333153},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/2684746.2689060},
+    doi = {10.1145/2684746.2689060},
+    abstract = {Convolutional neural network (CNN) has been widely employed for image recognition because it can achieve high accuracy by emulating behavior of optic nerves in living creatures. Recently, rapid growth of modern applications based on deep learning algorithms has further improved research and implementations. Especially, various accelerators for deep CNN have been proposed based on FPGA platform because it has advantages of high performance, reconfigurability, and fast development round, etc. Although current FPGA accelerators have demonstrated better performance over generic processors, the accelerator design space has not been well exploited. One critical problem is that the computation throughput may not well match the memory bandwidth provided an FPGA platform. Consequently, existing approaches cannot achieve best performance due to under-utilization of either logic resource or memory bandwidth. At the same time, the increasing complexity and scalability of deep learning applications aggravate this problem. In order to overcome this problem, we propose an analytical design scheme using the roofline model. For any solution of a CNN design, we quantitatively analyze its computing throughput and required memory bandwidth using various optimization techniques, such as loop tiling and transformation. Then, with the help of rooine model, we can identify the solution with best performance and lowest FPGA resource requirement. As a case study, we implement a CNN accelerator on a VC707 FPGA board and compare it to previous approaches. Our implementation achieves a peak performance of 61.62 GFLOPS under 100MHz working frequency, which outperform previous approaches significantly.},
+    booktitle = {Proceedings of the 2015 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays},
+    pages = {161–170},
+    numpages = {10},
+    keywords = {acceleration, convolutional neural network, fpga, roofline model},
+    location = {Monterey, California, USA},
+    series = {FPGA '15}
+}
+
+@inproceedings{li2016high,
+  title={A high performance FPGA-based accelerator for large-scale convolutional neural networks},
+  author={Li, Huimin and Fan, Xitian and Jiao, Li and Cao, Wei and Zhou, Xuegong and Wang, Lingli},
+  booktitle={2016 26th International Conference on Field Programmable Logic and Applications (FPL)},
+  pages={1--9},
+  year={2016},
+  organization={IEEE}
+}
+
+
+@inproceedings{10.1145/3626202.3637573, 
+  author = {Su, Chunyou and Du, Linfeng and Liang, Tingyuan and Lin, Zhe and Wang, Maolin and Sinha, Sharad and Zhang, Wei}, 
+  title = {GraFlex: Flexible Graph Processing on FPGAs through Customized Scalable Interconnection Network}, 
+  year = {2024}, 
+  isbn = {9798400704185}, 
+  publisher = {Association for Computing Machinery}, 
+  address = {New York, NY, USA}, 
+  url = {https://doi.org/10.1145/3626202.3637573}, 
+  doi = {10.1145/3626202.3637573}
+}
 
 @inproceedings{10.1145/3626202.3637556,
 author = {Elakhras, Ayatallah and Guerrieri, Andrea and Josipovic, Lana and Ienne, Paolo},
@@ -185,4 +415,5 @@ series = {FPGA '24}
 0 AllEntriesGroup:;
 1 StaticGroup:cse565m\;0\;1\;\;\;\;;
 }
+
 
